@@ -11,13 +11,13 @@ import { FakeBookList } from "./FakeBookList";
 export default function Form() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
-  const [synopsis, setSynopsis] = useState("");
+  const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [cover, setCover] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
   
   const handleClick = (e) => {
     e.preventDefault();
-    const Form = { title, author, synopsis, price, cover };
+    const Form = { title, author, description, price, imageUrl };
     console.log(Form);
   };
 
@@ -47,10 +47,10 @@ export default function Form() {
         />
         <TextField
           id="standard-basic"
-          label="Synopsis"
+          label="description"
           variant="standard"
-          value={synopsis}
-          onChange={(e) => setSynopsis(e.target.value)}
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
         />
         <TextField
           id="standard-basic"
@@ -63,8 +63,8 @@ export default function Form() {
           id="standard-basic"
           label="Book Cover"
           variant="standard"
-          value={cover}
-          onChange={(e) => setCover(e.target.value)}
+          value={imageUrl}
+          onChange={(e) => setImageUrl(e.target.value)}
         />
         <Button
           variant="outlined"
