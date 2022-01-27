@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import { FakeBookList } from './FakeBookList';
 
 export default function Book () {
   return (
@@ -17,7 +18,7 @@ export default function Book () {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Book
+            Title
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Leer es sexy
@@ -27,3 +28,11 @@ export default function Book () {
     </Card>
   );
 }
+
+/* {FakeBookList.map((item, index) => {
+  return (
+      <li key = {index}>
+          <a className= {item.Title}>
+          </a>
+      </li>
+  )})}   */
