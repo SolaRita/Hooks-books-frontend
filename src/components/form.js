@@ -10,6 +10,12 @@ import Button from '@mui/material/Button';
 export default function Form() {
   const[title,setTitle]=useState('')
   const[author,setAuthor]=useState('')
+  const[synopsis,setSynopsis]=useState('')
+  const[price,setPrice]=useState('')
+  const[cover,setCover]=useState('')
+
+
+
 
   return (
     <form action="">
@@ -26,9 +32,12 @@ export default function Form() {
           onChange={(e)=>setTitle(e.target.value)}  />
         <TextField id="standard-basic" label="Author" variant="standard" value={author}
           onChange={(e)=>setAuthor(e.target.value)}  />
-        <TextField id="standard-basic" label="Synopsis" variant="standard" />
-        <TextField id="standard-basic" label="Price" variant="standard" />
-        <TextField id="standard-basic" label="Book Cover" variant="standard" />
+        <TextField id="standard-basic" label="Synopsis" variant="standard" value={synopsis}
+          onChange={(e)=>setSynopsis(e.target.value)} />
+        <TextField id="standard-basic" label="Price" variant="standard" value={price}
+          onChange={(e)=>setPrice(e.target.value)} />
+        <TextField id="standard-basic" label="Book Cover" variant="standard" value={cover}
+          onChange={(e)=>setCover(e.target.value)}/>
         <Button variant="outlined" startIcon={<SaveIcon />} size = "small">Save</Button>
         </Box>
       </form>
