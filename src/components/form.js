@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -8,25 +8,32 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
 export default function Form() {
+  const[title,setTitle]=useState('')
+  const[author,setAuthor]=useState('')
 
   return (
-    <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <TextField id="standard-basic" label="Title" variant="standard" />
-      <TextField id="standard-basic" label="Author" variant="standard" />
-      <TextField id="standard-basic" label="Synopsis" variant="standard" />
-      <TextField id="standard-basic" label="Price" variant="standard" />
-      <TextField id="standard-basic" label="Book Cover" variant="standard" />
-      <Button variant="outlined" startIcon={<SaveIcon />} size = "small">Save</Button>
+    <form action="">
+      <Box
+        component="form"
+        sx={{
+          '& > :not(style)': { m: 1, width: '25ch' },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+      
+        <TextField id="standard-basic" label="Title"variant="standard" value={title}
+          onChange={(e)=>setTitle(e.target.value)}  />
+        <TextField id="standard-basic" label="Author" variant="standard" value={author}
+          onChange={(e)=>setAuthor(e.target.value)}  />
+        <TextField id="standard-basic" label="Synopsis" variant="standard" />
+        <TextField id="standard-basic" label="Price" variant="standard" />
+        <TextField id="standard-basic" label="Book Cover" variant="standard" />
+        <Button variant="outlined" startIcon={<SaveIcon />} size = "small">Save</Button>
+        </Box>
+      </form>
 
-
-    </Box>
+    
   );
 };
 
