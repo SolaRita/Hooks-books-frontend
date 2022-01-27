@@ -13,7 +13,10 @@ export default function Form() {
   const[synopsis,setSynopsis]=useState('')
   const[price,setPrice]=useState('')
   const[cover,setCover]=useState('')
-
+  const handleClick=(e)=>{e.preventDefault()
+  const Form={title, author,synopsis,price, cover}
+    console.log (Form) }
+  
 
 
 
@@ -38,7 +41,7 @@ export default function Form() {
           onChange={(e)=>setPrice(e.target.value)} />
         <TextField id="standard-basic" label="Book Cover" variant="standard" value={cover}
           onChange={(e)=>setCover(e.target.value)}/>
-        <Button variant="outlined" startIcon={<SaveIcon />} size = "small">Save</Button>
+        <Button variant="outlined" startIcon={<SaveIcon />} size = "small" onClick={handleClick}>Save</Button>
         </Box>
       </form>
 

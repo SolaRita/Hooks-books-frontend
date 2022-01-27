@@ -11,9 +11,7 @@ export default function BookList() {
   return (
     <Container>
       <Stack padding= "100px" display="flex" direction="row" justifyContent="center">
-        <Book/>
-        <Book/>
-        <Book/>
+        
       </Stack>
     </Container>
   );
