@@ -11,21 +11,14 @@ import { FakeBookList } from "./FakeBookList";
 
 
 export default function BookList() {
-  console.log(FakeBookList[0].Title)
   return (
     <Container>
       <Stack padding= "100px" display="flex" direction="row" justifyContent="center">
-      {FakeBookList.map((book, index) => {
-                    return (
-                        <li key = {index}>
-                            <a className= {book.Title}>
-                                
-                            </a>
-                        </li>
-                    )})}
+      {FakeBookList.map((book, index) => (
+                      <Book key={index} bookTitle={book.Title}></Book>
 
-        <Book title="Pocahontas" img="https://m.media-amazon.com/images/I/41vVzER+kqL.jpg"/>
+      ))}
       </Stack>
     </Container>
-  );
+  )
 }
