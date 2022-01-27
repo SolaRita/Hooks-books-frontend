@@ -6,19 +6,20 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { FakeBookList } from './FakeBookList';
 
-export default function Book () {
+export default function Book (props) {
+  console.log (props.img)
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="https://www.amara.com/static/uploads/images-2/products/x/huge/1536214/aspen-style-book-909387.jpg"
+          image={props.img}
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Title
+            {props.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Leer es sexy
