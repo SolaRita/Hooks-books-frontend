@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea, Container } from "@mui/material";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -6,14 +11,16 @@ import Switch from "@mui/material/Switch";
 import SaveIcon from "@mui/icons-material/Save";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import { FakeBookList } from "./FakeBookList";
+import { BookSharp } from "@mui/icons-material";
 
 export default function Form() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState(""); 
+
+  const[books,setBooks]=useState([])
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -28,7 +35,19 @@ export default function Form() {
     });
   };
 
+
+  useEffect(()=>{
+    fetch("http://localhost:8080/books")
+    .then(res=>res.json())
+    .then((result)=>{
+      setBooks(result);
+    }
+  )
+  },[])
+
   return (
+    <Container>
+    
     <form action="">
       <Box
         component="form"
@@ -83,57 +102,17 @@ export default function Form() {
         </Button>
       </Box>
     </form>
+
+    <h1>LIBROS DISPONIBLES</h1>
+
+      {books.map(book=>(
+        <h1>
+          Title: {book.title} <br/>
+        </h1>
+      ))}
+      
+
+</Container>
+  
   );
 }
-
-// export default function LoadingButtonsTransition() {
-//   const [loading, setLoading] = React.useState(false);
-//   function handleClick() {
-//     setLoading(true);
-//   }
-
-//   return (
-//     <Box sx={{ '& > button': { m: 1 } }}>
-//       <FormControlLabel
-//         sx={{
-//           display: 'block',
-//         }}
-//         control={
-//           <Switch
-//             checked={loading}
-//             onChange={() => setLoading(!loading)}
-//             name="loading"
-//             color="primary"
-//           />
-//         }
-//         label="Loading"
-//       />
-//       <LoadingButton
-//         onClick={handleClick}
-//         loading={loading}
-//         variant="outlined"
-//         disabled
-//       >
-//         disabled
-//       </LoadingButton>
-//       <LoadingButton
-//         onClick={handleClick}
-//         loading={loading}
-//         loadingIndicator="Loading..."
-//         variant="outlined"
-//       >
-//         Fetch data
-//       </LoadingButton>
-//       <LoadingButton
-//         onClick={handleClick}
-//         endIcon={<SendIcon />}
-//         loading={loading}
-//         loadingPosition="end"
-//         variant="contained"
-//       >
-//         Send
-//       </LoadingButton>
-
-//     </Box>
-//   );
-// }

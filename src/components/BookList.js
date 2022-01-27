@@ -18,10 +18,22 @@ export default function BookList() {
         justifyContent="center"
       >
         <Book/>
-        {/* {FakeBookList.map((book, index) => (
-          <Book key={index} bookTitle={book.Title}></Book>
-        ))} */}
-      </Stack>
-    </Container>
-  );
+        {FakeBookList.map((book, index) => (
+          <Card sx={{ maxWidth: 345 }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://www.laalcazaba.org/wp-content/uploads/2013/10/libro-arte.jpg"
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div"></Typography>
+              <Typography variant="body2" color="text.secondary">
+                Leer es sexy
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+  ),
 }
