@@ -1,0 +1,27 @@
+{
+  "FakeBookList": [
+    {
+      "title": "La historia de PHP",
+      "author": "Pepe",
+      "synopsis": "Una breve introducción a la historia de PHP",
+      "price": "20",
+      "bookcover": "https://www.ediciones-eni.com/libro/php-7-desarrollar-un-sitio-web-dinamico-e-interactivo-2-edicion-9782409018480_XL.jpg"
+    },
+
+    {
+      "title": "Java para principiantes",
+      "author": "Antonio García. J",
+      "synopsis": "Java facilito para todos",
+      "price": "25",
+      "bookcover": "https://m.media-amazon.com/images/I/41vVzER+kqL.jpg"
+    },
+
+    {
+      "title": "Caperucita Roja en el siglo XXII",
+      "author": "Laura Garrido",
+      "synopsis": "Caperucita Roja en una historia futurista",
+      "price": "40",
+      "bookcover": "https://m.media-amazon.com/images/I/51WnOjfszKL.jpg"
+    }
+  ]
+}

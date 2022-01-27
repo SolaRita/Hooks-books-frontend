@@ -8,17 +8,20 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import { FakeBookList } from "./FakeBookList";
 
-
-
 export default function BookList() {
   return (
     <Container>
-      <Stack padding= "100px" display="flex" direction="row" justifyContent="center">
-      {FakeBookList.map((book, index) => (
-                      <Book key={index} bookTitle={book.Title}></Book>
-
-      ))}
+      <Stack
+        padding="100px"
+        display="flex"
+        direction="row"
+        justifyContent="center"
+      >
+        <Book/>
+        {/* {FakeBookList.map((book, index) => (
+          <Book key={index} bookTitle={book.Title}></Book>
+        ))} */}
       </Stack>
     </Container>
-  )
+  );
 }

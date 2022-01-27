@@ -14,6 +14,7 @@ export default function Form() {
   const [synopsis, setSynopsis] = useState("");
   const [price, setPrice] = useState("");
   const [cover, setCover] = useState("");
+  
   const handleClick = (e) => {
     e.preventDefault();
     const Form = { title, author, synopsis, price, cover };
