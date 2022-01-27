@@ -2,12 +2,12 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import BookCard from './card';
+import Book from './Book';
 import Grid from '@mui/material/Grid';
 import Paper  from '@mui/material/Paper';
 
 
-export default function BookCards() {
+export default function BookList() {
   return (
     <Box
     sx={{
@@ -20,9 +20,9 @@ export default function BookCards() {
       },
     }}
   >
-    <BookCard elevation={5} />
-    <BookCard />
-    <BookCard elevation={5} />
+    <Book elevation={5} />
+    <Book />
+    <Book elevation={5} />
   </Box>
 );
 };
