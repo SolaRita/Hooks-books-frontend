@@ -14,20 +14,18 @@ export default function Form() {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [imageUrl, setImageUrl] = useState("");
-  
+
   const handleClick = (e) => {
     e.preventDefault();
     const Form = { title, author, description, price, imageUrl };
     console.log(Form);
-    fetch("http://localhost:8080/books",{ 
-    method:"POST", 
-    headers:{"Content-Type":"application/json"}, 
-    body:JSON.stringify(book)
-  
-  }).then(()=>{ 
-    console.log("New Book added")
-  } 
-    )} 
+    fetch("http://localhost:8080/books", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(Form),
+    }).then(() => {
+      console.log("New Book added");
+    });
   };
 
   return (
