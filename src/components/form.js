@@ -19,6 +19,8 @@ export default function Form() {
       autoComplete="off"
     >
       <TextField id="standard-basic" label="Title" variant="standard" />
+      <TextField id="standard-basic" label="Author" variant="standard" />
+      <TextField id="standard-basic" label="Synopsis" variant="standard" />
       <TextField id="standard-basic" label="Price" variant="standard" />
       <TextField id="standard-basic" label="Book Cover" variant="standard" />
       <Button variant="outlined" startIcon={<SaveIcon />} size = "small">Save</Button>

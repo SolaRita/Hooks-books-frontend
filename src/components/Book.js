@@ -12,16 +12,15 @@ export default function Book () {
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image="https://www.amara.com/static/uploads/images-2/products/x/huge/1536214/aspen-style-book-909387.jpg"
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            Book
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            Leer es sexy
           </Typography>
         </CardContent>
       </CardActionArea>
